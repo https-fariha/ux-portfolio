@@ -1,0 +1,85 @@
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap');
+
+.fariha-navbar {
+  background: #C8DBE1;
+  min-height: 60px; 
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+
+.navbar-inner {
+  padding: 0 80px !important;
+  width: 100%;              /* was 80% — needs full width on mobile */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* brand left, toggle right */
+}
+
+
+
+/* logo */
+.navbar-brand-name {
+  font-family: 'KiwiSoda';
+  src: href = ('./Fonts/KiwiSoda.woff2') format('woff2');
+  font-size: 30px !important;
+  color: #5a8fa8 !important;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+.navbar-brand-name:hover {
+  color: #FBF6EA !important;
+}
+
+/* ── Nav links ── */
+.navbar-links {
+  gap: 8px;
+}
+
+.nav-link-item {
+  font-family: 'Space Mono', monospace;
+  font-size: 20px !important;
+  color: #5a8fa8 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.5px;
+  padding: 6px 14px !important;
+  border-radius: 4px;
+  transition: color 150ms ease, background-color 150ms ease;
+}
+
+.nav-link-item:hover {
+  color: #2c3e50 !important;
+  background-color: rgba(90, 143, 168, 0.12);
+}
+
+/* active link */
+.nav-link-item.active-link {
+  color: #FBF6EA !important;
+  border-bottom: 2px solid #FBF6EA;
+}
+
+/* ── Mobile toggler ── */
+.navbar-toggler-custom {
+  border: 1px solid rgba(90, 143, 168, 0.4);
+}
+
+.navbar-toggler-custom:focus {
+  box-shadow: none;
+}
+
+/* Mobile only */
+@media (max-width: 991px) {
+  .navbar-inner {
+    padding: 0 20px !important;   /* tighter padding on mobile */
+  }
+
+  .navbar-toggler-custom {
+    margin-left: auto;            /* pushes toggle to far right */
+  }
+}

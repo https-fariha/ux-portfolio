@@ -1,0 +1,579 @@
+.case-study {
+  background-color: #FBF6EA;
+  color: #2c3e50;
+  font-family: 'Space Mono', monospace;
+}
+
+/* ── Step navigation ── */
+
+.cs-stepnav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: flex-start;
+
+  background-color: #FBF6EA;
+
+  padding: 24px 60px 40px;
+
+  border-bottom: 1px solid rgba(44, 62, 80, 0.15);
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cs-stepnav::-webkit-scrollbar {
+  display: none;
+}
+
+.cs-step {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+  min-width: 100px;
+
+  position: relative;
+}
+
+.cs-step:last-child {
+  flex: 0;
+}
+
+.cs-step__circle {
+  flex-shrink: 0;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #C8DBE1;
+  color: #2c3e50;
+
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+
+  text-decoration: none;
+
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.cs-step__circle--active {
+  background-color: #2c3e50;
+  color: #FBF6EA;
+}
+
+.cs-step__label {
+  position: absolute;
+
+  top: 48px;
+  left: 0;
+
+  width: 130px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  color: #446b7d;
+}
+
+.cs-step__line {
+  flex: 1;
+
+  height: 2px;
+
+  background-color: rgba(44, 62, 80, 0.2);
+
+  margin: 0 12px;
+}
+
+
+/* ── Hero ── */
+
+.cs-hero {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 520px;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Only the sky/hero background is absolutely positioned */
+
+.cs-hero-image-wrap {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+}
+
+/* Only the hero background image fills the hero */
+
+.cs-hero-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Overlay keeps the hero title readable */
+
+.cs-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(251, 246, 234, 0.97) 15%,
+    rgba(251, 246, 234, 0.65) 55%,
+    rgba(251, 246, 234, 0.12) 100%
+  );
+}
+
+/* Hero text is centred within the page and above the image */
+
+.cs-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 140px 80px 80px;
+
+  text-align: left;
+}
+
+.cs-back {
+  display: inline-block;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #5a8fa8;
+
+  text-decoration: none;
+
+  margin-bottom: 32px;
+}
+
+.cs-back:hover{
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.cs-title {
+  position: relative;
+
+  z-index: 3;
+
+
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 600;
+
+  color: #5a8fa8;
+
+  line-height: 1.4;
+
+  margin: 0 0 20px;
+}
+
+.cs-subtitle {
+  position: relative;
+
+  z-index: 3;
+
+  max-width: 640px;
+
+  font-size: 17px;
+
+  color: #446b7d;
+
+  line-height: 1.7;
+
+  margin: 0 0 36px;
+}
+
+.cs-meta {
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 32px;
+
+  margin-bottom: 0;
+}
+
+.cs-meta__item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.cs-meta__label {
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  color: #5a8fa8;
+
+  font-weight: 700;
+}
+
+.cs-meta__value {
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* ── Content sections ── */
+
+.cs-section {
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 80px;
+
+  scroll-margin-top: 120px;
+}
+
+.cs-section-heading {
+
+  font-weight: 700;
+
+  font-size: 22px;
+
+  line-height: 1.5;
+
+  color: #2c3e50;
+
+  margin: 0 0 32px;
+}
+
+.cs-section-content {
+  width: 100%;
+}
+
+.cs-text {
+  max-width: 680px;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  margin: 0 0 24px;
+}
+
+
+/* ── Single featured image ── */
+
+.cs-figure {
+  position: relative;
+
+  width: 100%;
+
+  margin: 48px 0;
+}
+
+.cs-image {
+  position: relative;
+
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  border-radius: 4px;
+}
+
+/* Image 1 */
+
+.cs-image--featured {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+
+  border: 1px solid rgba(44, 62, 80, 0.15);
+
+  box-shadow: 7px 7px 0 rgba(44, 62, 80, 0.12);
+}
+
+
+/* ── Two-image screenshot grids ── */
+
+.cs-image-grid {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  width: 100%;
+
+  gap: 28px;
+
+  margin: 48px 0 56px;
+}
+
+
+.cs-image-grid__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio:  18/ 10;      /* adjust until the blue is fully cropped */
+  overflow: hidden;
+  border: 1px solid rgba(44, 62, 80, 0.15);
+  border-radius: 4px;
+  box-shadow: 7px 7px 0 rgba(44, 62, 80, 0.12);
+}
+
+.cs-image-grid__image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;   /* keeps the top (real content) visible, crops the bottom */
+  cursor: zoom-in;
+  transition: opacity 150ms ease;
+}
+
+.cs-image-grid__image:hover {
+  opacity: 0.92;
+}
+.cs-image-grid__figure {
+  position: relative;
+
+  width: 100%;
+
+  min-width: 0;
+
+  margin: 0;
+}
+
+
+
+
+/* ── Image captions ── */
+
+.cs-caption {
+  display: block;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  color: #446b7d;
+
+  font-style: italic;
+
+  margin-top: 12px;
+}
+
+
+/* ── Challenge two-column layout ── */
+
+.cs-two-column {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 48px;
+
+  margin-bottom: 40px;
+}
+
+.cs-column h3 {
+  
+
+  font-size: 15px;
+
+  color: #5a8fa8;
+
+  margin-bottom: 20px;
+}
+
+.cs-column ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+.cs-column li {
+  position: relative;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  padding-left: 20px;
+}
+
+.cs-column li::before {
+  content: '✦';
+
+  position: absolute;
+
+  left: 0;
+
+  color: #5a8fa8;
+}
+
+
+/* ── Footer ── */
+
+.cs-footer {
+  padding: 80px;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(44, 62, 80, 0.15);
+}
+
+.cs-footer__label {
+  display: block;
+
+  font-size: 12px;
+
+  color: #446b7d;
+
+  margin-bottom: 12px;
+}
+
+.cs-footer__link {
+  font-family: 'KiwiSoda', monospace;
+
+  font-size: 30px;
+
+  color: #5a8fa8;
+
+  text-decoration: none;
+}
+
+.cs-lightbox-toggle {
+  display: none;
+}
+
+.cs-lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px;
+
+  background-color: rgba(44, 62, 80, 0.94);
+
+  cursor: zoom-out;
+}
+
+.cs-lightbox-toggle:checked ~ .cs-lightbox-overlay {
+  display: flex;
+}
+
+.cs-lightbox-overlay__image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ── Responsive ── */
+
+@media (max-width: 768px) {
+  .cs-stepnav {
+    padding: 16px 24px 32px;
+  }
+
+  .cs-step__label {
+    display: none;
+  }
+
+  .cs-hero {
+    min-height: 600px;
+  }
+
+  .cs-hero-content {
+    padding: 100px 24px 60px;
+  }
+
+  .cs-section {
+    padding: 60px 24px;
+  }
+
+  .cs-footer {
+    padding: 60px 24px;
+  }
+
+  .cs-image-grid {
+    grid-template-columns: 1fr;
+
+    gap: 36px;
+
+    margin: 40px 0;
+  }
+
+  .cs-two-column {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+  }
+
+  .cs-title {
+    font-size: 28px;
+  }
+
+  .cs-subtitle {
+    font-size: 15px;
+  }
+}

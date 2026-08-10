@@ -1,0 +1,204 @@
+/* ── Title — left aligned, no padding offset ── */
+.about-title {
+  font-family: 'KiwiSoda', monospace;
+  font-size: clamp(72px, 11vw, 140px);
+  color: #5a8fa8;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 48px;
+  padding-left: 0;        /* ← remove the 300px that was pushing it off */
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Two column grid ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 55% 45%;   /* bio wider, images contained */
+  gap: 0;                            /* no gap — images overlap bio edge */
+  align-items: start;
+}
+
+/* ── Bio — full width of left column ── */
+.bio {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;         /* ← remove any margin offset */
+  min-height: 380px;
+  border-radius: 3px;
+  background: rgba(200, 219, 225, 0.55);
+  padding: 36px 40px;
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+  border-left: 3px solid rgba(90, 143, 168, 0.3);
+}
+
+.bio p {
+  color: #39617C;
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(13px, 1.1vw, 16px);
+  font-weight: 600;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
+  width: auto;
+  height: auto;
+}
+
+/* ── Right column ── */
+.about-right {
+  position: relative;
+}
+
+.images-stack {
+  position: relative;
+  height: 480px;
+  width: 100%;
+}
+
+/* Receipt — top left of right column */
+.about-page .receipt-img {
+  position: absolute;
+  width: 52%;
+  height: auto;
+  top: -80px;             /* overlaps up into title area */
+  left: -20px;            /* slight overlap onto bio */
+  transform: rotate(6deg);
+  z-index: 3;
+  transition: transform 300ms ease;
+}
+
+.about-page .receipt-img:hover {
+  transform: rotate(3deg) scale(1.02);
+  z-index: 5;
+}
+
+/* Skills — bottom right, overlaps receipt */
+.about-page .skills-img {
+  position: absolute;
+  width: 68%;
+  height: auto;
+  top: 160px;
+  right: -20px;           /* flush to right, not overflowing */
+  transform: rotate(-5deg);
+  z-index: 4;
+  transition: transform 300ms ease;
+}
+
+.about-page .skills-img:hover {
+  transform: rotate(-2deg) scale(1.02);
+  z-index: 5;
+}
+
+/* ── ASCII ── */
+.about-page .ascii-img {
+  width: 220px;
+  height: auto;
+  opacity: 0.22;
+  transform: rotate(-153deg);
+  margin-top: -40px;
+  margin-left: 60px;
+  pointer-events: none;
+  position: relative;
+  z-index: 0;
+}
+
+/* ── Layout ── */
+.about-layout {
+  position: relative;
+  z-index: 1;
+  padding: 60px 80px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+
+  /* Fix title — remove desktop padding-left */
+  .about-title {
+    font-size: clamp(56px, 16vw, 90px) !important;
+    padding-left: 0 !important;   /* ← removes the 300px desktop offset */
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  /* Fix bio box — full width, no offset */
+  .bio {
+    width: 100% !important;
+    margin-left: 0 !important;    /* ← removes any desktop margin-left */
+    padding: 24px !important;
+    box-sizing: border-box;
+  }
+
+  .bio p {
+    font-size: 13px !important;
+    line-height: 1.7;
+    width: auto !important;       /* ← removes any fixed width from desktop */
+    height: auto !important;
+  }
+
+  /* Fix layout padding so nothing bleeds off edge */
+  .about-layout {
+    padding: 40px 20px 60px !important;
+  }
+
+
+
+
+  /* Single column, everything stacks */
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .about-left  { order: 1; width: 100%; }
+  .about-right { order: 2; width: 100%; }
+
+  /* Images: kill ALL absolute positioning, stack vertically */
+  .images-stack {
+    position: static !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 28px !important;
+    width: 100% !important;
+  }
+
+  .about-page .receipt-img,
+  .about-page .skills-img {
+    position: static !important;
+    width: 88% !important;
+    height: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .about-page .receipt-img {
+    transform: rotate(3deg) !important;
+  }
+
+  .about-page .skills-img {
+    transform: rotate(-3deg) !important;
+  }
+
+  .about-page .ascii-img {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .receipt-img,
+  .about-page .skills-img {
+    width: 95% !important;
+  }
+}
