@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/ux-portfolio/static/css/main.b583d3fe.css",
+    "main.js": "/ux-portfolio/static/js/main.bbf4eca9.js",
+    "static/js/453.fd2f0c4a.chunk.js": "/ux-portfolio/static/js/453.fd2f0c4a.chunk.js",
+    "static/media/4.png": "/ux-portfolio/static/media/4.a1d4895ab780ba0b6e14.png",
+    "static/media/3.png": "/ux-portfolio/static/media/3.d89053598679e24661e0.png",
+    "static/media/5.png": "/ux-portfolio/static/media/5.5aeb6b9ad84bdbe21115.png",
+    "static/media/1.png": "/ux-portfolio/static/media/1.cacf083864f9f140cdb0.png",
+    "static/media/2.png": "/ux-portfolio/static/media/2.9fcb3a59a1da74bb60e3.png",
+    "static/media/WL-titlecard.png": "/ux-portfolio/static/media/WL-titlecard.d040f4a57caaf1f02766.png",
+    "static/media/Receipt.png": "/ux-portfolio/static/media/Receipt.a36915862ccd257cd27c.png",
+    "static/media/visibility.png": "/ux-portfolio/static/media/visibility.3644fc09de938535cca5.png",
+    "static/media/finance.png": "/ux-portfolio/static/media/finance.4ca764439a365fa2ee8e.png",
+    "static/media/calender.png": "/ux-portfolio/static/media/calender.b8a0eea8fc67a64ac077.png",
+    "static/media/manager.png": "/ux-portfolio/static/media/manager.0959d125cf0bc0af6145.png",
+    "static/media/consultant main.png": "/ux-portfolio/static/media/consultant main.226803e17ce8caf04053.png",
+    "static/media/admin.png": "/ux-portfolio/static/media/admin.158c88f6c6ac61447ea2.png",
+    "static/media/MainASCII.png": "/ux-portfolio/static/media/MainASCII.7774ede0449d04d7571b.png",
+    "static/media/CV.pdf": "/ux-portfolio/static/media/CV.c612d0678f9303fb236c.pdf",
+    "static/media/fdmheader.png": "/ux-portfolio/static/media/fdmheader.bc3353030114d110813f.png",
+    "static/media/hero3.png": "/ux-portfolio/static/media/hero3.08848f48577fcbee5dbc.png",
+    "static/media/game_lost.png": "/ux-portfolio/static/media/game_lost.235829a61f5c29da523b.png",
+    "static/media/instructions.PNG": "/ux-portfolio/static/media/instructions.4a2c9518a9b4c7cb7eae.PNG",
+    "index.html": "/ux-portfolio/index.html",
+    "main.b583d3fe.css.map": "/ux-portfolio/static/css/main.b583d3fe.css.map",
+    "main.bbf4eca9.js.map": "/ux-portfolio/static/js/main.bbf4eca9.js.map",
+    "453.fd2f0c4a.chunk.js.map": "/ux-portfolio/static/js/453.fd2f0c4a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b583d3fe.css",
+    "static/js/main.bbf4eca9.js"
+  ]
+}
