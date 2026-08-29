@@ -185,8 +185,8 @@ content:
 ],
 
 nextProject: {
-title: 'Flora',
-path: '/projects/flora',
+title: 'FDM Timesheet application',
+path: '/projects/timesheet',
 },
 };
 

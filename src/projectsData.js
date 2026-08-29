@@ -12,10 +12,12 @@ const projects = [
     tagline: 'An integrated weather API built to help photographers plan shoots around the light.',
     categories: ['Web Dev', 'UX Dev/Design', 'FIGMA'],
     tools: ['FIGMA', 'REACT'],
-    theme: 'light',
+    theme: 'dark',
     liveUrl: 'https://github.com/https-fariha/WeatherLens',
     caseStudyPath: '/projects/weatherlens',
   },
+
+  /* 
   {
     id: 'flora',
     title: 'Flora',
@@ -26,6 +28,9 @@ const projects = [
     liveUrl: '',
     caseStudyPath: '/projects/flora',
   },
+  */
+
+
   {
     id: 'timesheet',
     title: 'FDM Timesheet App',
@@ -56,6 +61,9 @@ const projects = [
     liveUrl: '',
     caseStudyPath: '',
   },
+
+  /*
+  
   {
     id: 'computer-vision',
     title: 'Computer Vision',
@@ -66,6 +74,7 @@ const projects = [
     liveUrl: '',
     caseStudyPath: '',
   },
+  */
   
 ];
 

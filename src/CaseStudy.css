@@ -26,10 +26,6 @@
   -ms-overflow-style: none;
 }
 
-.cs-stepnav::-webkit-scrollbar {
-  display: none;
-}
-
 .cs-step {
   display: flex;
   align-items: center;
@@ -103,43 +99,40 @@
 
 .cs-hero {
   position: relative;
-
-  overflow: hidden;
-
+  width: 100%;
   min-height: 520px;
+  overflow: hidden;
 
   display: flex;
   align-items: flex-end;
 }
 
-/* Only the sky/hero background is absolutely positioned */
-
+/* Force the image wrapper to fill the entire hero */
 .cs-hero-image-wrap {
-  position: absolute;
-
-  inset: 0;
-
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
   z-index: 0;
 }
 
-/* Only the hero background image fills the hero */
-
 .cs-hero-image {
   display: block;
-
-  width: 100%;
-  height: 100%;
-
+  width: 100% !important;
+  height: 100% !important;
   object-fit: cover;
-  object-position: center;
+  object-position: top center;
 }
 
-/* Overlay keeps the hero title readable */
+/* Overlay */
 
 .cs-hero-overlay {
   position: absolute;
-
   inset: 0;
+  z-index: 1;
 
   background: linear-gradient(
     to top,
@@ -149,18 +142,16 @@
   );
 }
 
-/* Hero text is centred within the page and above the image */
+/* Hero text */
 
 .cs-hero-content {
   position: relative;
-
   z-index: 2;
 
   width: 100%;
   max-width: 900px;
 
   margin: 0 auto;
-
   padding: 140px 80px 80px;
 
   text-align: left;
@@ -298,45 +289,45 @@
 
 
 /* ── Single featured image ── */
-
 .cs-figure {
-  position: relative;
-
+  position: static !important;
+  display: block;
   width: 100%;
-
-  margin: 48px 0;
+  overflow: hidden;
+  margin: 0 0 56px 0 !important;
 }
 
 .cs-image {
-  position: relative;
-
-  z-index: 1;
-
+  position: static !important;
   display: block;
-
   width: 100%;
-
   height: auto;
-
+  max-height: 500px;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  background-color: rgba(44, 62, 80, 0.04);
   border-radius: 4px;
+  margin: 0;
 }
+
 
 /* Image 1 */
 
 .cs-image--featured {
+  display: block !important;
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 3 / 2 !important;
   max-width: 760px;
-
   margin: 0 auto;
-
   object-fit: contain;
-
+  background-color: rgba(44, 62, 80, 0.04);
   border: 1px solid rgba(44, 62, 80, 0.15);
-
   box-shadow: 7px 7px 0 rgba(44, 62, 80, 0.12);
 }
 
-
 /* ── Two-image screenshot grids ── */
+
 
 .cs-image-grid {
   position: relative;
@@ -354,9 +345,10 @@
 
 
 .cs-image-grid__frame {
+  display: block !important;
   position: relative;
   width: 100%;
-  aspect-ratio:  18/ 10;      /* adjust until the blue is fully cropped */
+  aspect-ratio: 18 / 10 !important;
   overflow: hidden;
   border: 1px solid rgba(44, 62, 80, 0.15);
   border-radius: 4px;
@@ -364,16 +356,14 @@
 }
 
 .cs-image-grid__image {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: top center;
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;   /* keeps the top (real content) visible, crops the bottom */
-  cursor: zoom-in;
-  transition: opacity 150ms ease;
 }
 
 .cs-image-grid__image:hover {
@@ -395,18 +385,14 @@
 /* ── Image captions ── */
 
 .cs-caption {
-  display: block;
-
+  position: static !important;
   font-size: 12px;
-
-  line-height: 1.6;
-
-  color: #446b7d;
-
-  font-style: italic;
-
-  margin-top: 12px;
+  display: block;
+  clear: both;
+  margin-top: 16px;
+  margin-bottom: 0;
 }
+
 
 
 /* ── Challenge two-column layout ── */
@@ -528,9 +514,10 @@
 }
 
 
-/* ── Responsive ── */
+/* ── Tablet ── */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+
   .cs-stepnav {
     padding: 16px 24px 32px;
   }
@@ -539,41 +526,196 @@
     display: none;
   }
 
+  /* Hero */
+
+  .cs-hero-image-wrap {
+    width: 100%;
+    height: 100%; /* was height: 500% !important */
+  }
+
+  .cs-hero-image {
+    object-position: top center;
+  }
+
   .cs-hero {
     min-height: 600px;
   }
 
+
   .cs-hero-content {
-    padding: 100px 24px 60px;
+    padding: 100px 48px 64px;
   }
 
+  /* Content */
+
   .cs-section {
-    padding: 60px 24px;
+    padding: 64px 48px;
   }
 
   .cs-footer {
-    padding: 60px 24px;
+    padding: 64px 48px;
   }
+
+  /* Images */
 
   .cs-image-grid {
-    grid-template-columns: 1fr;
-
-    gap: 36px;
-
-    margin: 40px 0;
+    gap: 28px;
   }
 
-  .cs-two-column {
-    grid-template-columns: 1fr;
-
-    gap: 32px;
+  .cs-image-grid__frame {
+    width: 100%;
   }
+
+  .cs-image-grid__image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/* ── Phone ── */
+
+@media (max-width: 600px) {
+
+  .cs-stepnav {
+    padding: 16px 20px 28px;
+  }
+
+  .cs-step {
+    min-width: 70px;
+  }
+
+  .cs-step__circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cs-step__line {
+    margin: 0 8px;
+  }
+
+  /* Hero */
+
+  .cs-hero-image-wrap {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%; /* was height: 480px !important; width: auto */
+  }
+
+  .cs-hero {
+    min-height: 480px; /* fine to keep as a floor, content can still grow past it */
+  }
+
+  .cs-hero-image {
+    object-position: top center;
+  }
+
+  .cs-hero-content {
+    padding: 80px 24px 48px;
+  }
+
+  /* Text */
 
   .cs-title {
-    font-size: 28px;
+    font-size: clamp(28px, 9vw, 40px);
+    line-height: 1.3;
   }
 
   .cs-subtitle {
-    font-size: 15px;
+    font-size: 10px;
+    line-height: 1.8;
+  }
+
+  .cs-meta {
+    gap: 20px;
+  }
+
+  /* Content */
+
+  .cs-section {
+    padding: 56px 24px;
+  }
+
+  .cs-section-heading {
+  position: relative;
+  z-index: 5;
+  margin-top: 0 !important;
+}
+
+  .cs-text {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* Featured image */
+
+  .cs-figure {
+    width: 100%;
+    margin: 36px 0;
+  }
+
+  .cs-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .cs-image--featured {
+    width: 100%;
+    max-width: 100%;
+    
+  }
+
+  /* Screenshot grids */
+
+  .cs-image-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 40px;
+    margin: 40px 0;
+  }
+
+  .cs-image-grid__figure {
+    width: 100%;
+    margin: 0;
+  }
+
+  .cs-image-grid__frame {
+    position: relative;
+
+    width: 100%;
+
+    /* Taller screenshots on phones */
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+  }
+
+  .cs-image-grid__image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  /* Two-column text sections */
+
+  .cs-two-column {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Footer */
+
+  .cs-footer {
+    padding: 56px 24px;
   }
 }

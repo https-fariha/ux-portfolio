@@ -72,7 +72,7 @@ body {
   font-family: 'Space Mono', monospace;
   font-size: clamp(12px, 1.5vw, 15px);
   font-weight: 600;
-  line-height: 1.8;
+  line-height: 2;
   color: #446b7d;
   max-width: 480px;
   margin-bottom: 36px;
@@ -136,12 +136,7 @@ img {
   }
 }
 
-/* ════════════════════════════
-   MOBILE  (max 768px)
-════════════════════════════ */
-/* ════════════════════════════
-   MOBILE  (max 768px)
-════════════════════════════ */
+
 @media (max-width: 768px) {
   .hero-section {
     height: auto;

@@ -61,7 +61,8 @@
 
 .footer-label {
   font-family: 'Space Mono', monospace;
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #39617C;
@@ -76,6 +77,7 @@
 }
 
 .footer-email {
+  font-size: 15px;;
   text-decoration: none;
   transition: color 150ms ease;
 }

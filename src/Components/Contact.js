@@ -47,7 +47,7 @@ export default function Contact() {
 
             <div className="footer-meta">
               <span className="footer-label">Mail</span>
-              <a href="mailto:your@email.com" className="footer-value footer-email">
+              <a href="mailto:fariha0625@email.com" className="footer-value footer-email">
                 fariha0625@email.com
               </a>
             </div>
