@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'KiwiSoda';
+  src: url('./Fonts/KiwiSoda.woff2') format('woff2');
+  font-display: swap;
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -52,7 +59,7 @@ body {
 }
 
 .hero-title {
-  font-family: 'KiwiSoda';
+  font-family: 'KiwiSoda', 'Space Mono', sans-serif;
   font-size: clamp(48px, 10vw, 130px); /* was clamped too wide — now scales properly */
   white-space: nowrap;
   color: #5a8fa8;
@@ -138,6 +145,11 @@ img {
 
 
 @media (max-width: 768px) {
+
+  .hover-grid-wrapper{
+    opacity: 10%;
+  }
+
   .hero-section {
     height: auto;
     min-height: 100vh;

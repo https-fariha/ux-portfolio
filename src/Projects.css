@@ -1,10 +1,17 @@
+@font-face {
+  font-family: 'KiwiSoda';
+  src: url('./Fonts/KiwiSoda.woff2') format('woff2');
+  font-display: swap;
+}
+
+
 .projects-section {
   padding: 100px 80px;
   background-color: #FBF6EA;
 }
 
 .projects-heading {
-  font-family: 'KiwiSoda', monospace;
+  font-family: 'KiwiSoda', 'Space Mono', sans-serif;
   font-size: clamp(40px, 6vw, 90px);
   color: #5a8fa8;
   text-align: center;

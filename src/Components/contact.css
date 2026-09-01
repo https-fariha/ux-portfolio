@@ -33,7 +33,7 @@
 }
 
 .footer-logo {
-  font-family: 'KiwiSoda', monospace;
+  font-family: 'KiwiSoda', 'Space Mono', sans-serif;
   font-size: 32px;
   color: #5a8fa8;
   text-decoration: none;

@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'KiwiSoda';
+  src: url('./Fonts/KiwiSoda.woff2') format('woff2');
+  font-display: swap;
+}
+
+
 .case-study {
   background-color: #FBF6EA;
   color: #2c3e50;
@@ -472,7 +479,7 @@
 }
 
 .cs-footer__link {
-  font-family: 'KiwiSoda', monospace;
+  font-family: 'KiwiSoda', 'Space Mono', sans-serif;
 
   font-size: 30px;
 

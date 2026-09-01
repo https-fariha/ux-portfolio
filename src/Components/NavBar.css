@@ -25,7 +25,7 @@
 
 /* logo */
 .navbar-brand-name {
-  font-family: 'KiwiSoda';
+  font-family: 'KiwiSoda', 'Space Mono', sans-serif;
   src: href = ('./Fonts/KiwiSoda.woff2') format('woff2');
   font-size: 30px !important;
   color: #5a8fa8 !important;
