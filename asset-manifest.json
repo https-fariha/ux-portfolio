@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ux-portfolio/static/css/main.b583d3fe.css",
-    "main.js": "/ux-portfolio/static/js/main.9126469a.js",
+    "main.css": "/ux-portfolio/static/css/main.c513b246.css",
+    "main.js": "/ux-portfolio/static/js/main.4947668c.js",
     "static/js/453.fd2f0c4a.chunk.js": "/ux-portfolio/static/js/453.fd2f0c4a.chunk.js",
     "static/media/4.png": "/ux-portfolio/static/media/4.a1d4895ab780ba0b6e14.png",
     "static/media/3.png": "/ux-portfolio/static/media/3.d89053598679e24661e0.png",
@@ -17,18 +17,19 @@
     "static/media/consultant main.png": "/ux-portfolio/static/media/consultant main.226803e17ce8caf04053.png",
     "static/media/admin.png": "/ux-portfolio/static/media/admin.158c88f6c6ac61447ea2.png",
     "static/media/MainASCII.png": "/ux-portfolio/static/media/MainASCII.7774ede0449d04d7571b.png",
-    "static/media/CV.pdf": "/ux-portfolio/static/media/CV.c612d0678f9303fb236c.pdf",
+    "static/media/CV.pdf": "/ux-portfolio/static/media/CV.f7fd2f9c471f6f081198.pdf",
     "static/media/fdmheader.png": "/ux-portfolio/static/media/fdmheader.bc3353030114d110813f.png",
     "static/media/hero3.png": "/ux-portfolio/static/media/hero3.08848f48577fcbee5dbc.png",
     "static/media/game_lost.png": "/ux-portfolio/static/media/game_lost.235829a61f5c29da523b.png",
     "static/media/instructions.PNG": "/ux-portfolio/static/media/instructions.4a2c9518a9b4c7cb7eae.PNG",
+    "static/media/KiwiSoda.woff2": "/ux-portfolio/static/media/KiwiSoda.4d7087eadf54b783a015.woff2",
     "index.html": "/ux-portfolio/index.html",
-    "main.b583d3fe.css.map": "/ux-portfolio/static/css/main.b583d3fe.css.map",
-    "main.9126469a.js.map": "/ux-portfolio/static/js/main.9126469a.js.map",
+    "main.c513b246.css.map": "/ux-portfolio/static/css/main.c513b246.css.map",
+    "main.4947668c.js.map": "/ux-portfolio/static/js/main.4947668c.js.map",
     "453.fd2f0c4a.chunk.js.map": "/ux-portfolio/static/js/453.fd2f0c4a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b583d3fe.css",
-    "static/js/main.9126469a.js"
+    "static/css/main.c513b246.css",
+    "static/js/main.4947668c.js"
   ]
 }
