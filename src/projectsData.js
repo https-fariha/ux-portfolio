@@ -54,12 +54,12 @@ const projects = [
   {
     id: 'thaal-supply',
     title: 'Thaal Supply',
-    tagline: 'Redesigning and tailoring a Desi wedding brand to the target demographic.',
+    tagline: 'Redesigning and tailoring a South Asian wedding brand to the target demographic.',
     categories: ['UX Dev/Design', 'FIGMA'],
-    tools: ['FIGMA', 'SHOPIFY'],
+    tools: ['FIGMA', 'SHOPIFY', 'IbisPaint'],
     theme: 'light',
-    liveUrl: '',
-    caseStudyPath: '',
+    liveUrl: 'https://thaalsupply.com/',
+    caseStudyPath: '/projects/thaal-supply',
   },
 
   /*

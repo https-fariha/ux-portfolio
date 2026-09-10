@@ -12,7 +12,7 @@ export default function Contact() {
   e.preventDefault();
   setStatus('sending');
 
-  // Send notification to YOU
+  // Send notification to ME
   emailjs.sendForm('service_z2egxmv', 'template_djdr28q', form.current, 'AbfKQIRzLs76EGzTn')
     .then(() => {
       // Send auto-reply to THEM

@@ -198,7 +198,10 @@ content:
 
 ],
 
-
+nextProject: {
+title: 'Thaal Supply',
+path: '/projects/thaal-supply',
+},
 };
 
 export default MazeRunCaseStudy;

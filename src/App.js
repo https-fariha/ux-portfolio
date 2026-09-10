@@ -14,7 +14,7 @@ import CaseStudy from './CaseStudy';
 import weatherLensCaseStudy from './weatherLensCaseStudy';
 import timesheetCaseStudy from './FDMCaseStudy';
 import mazeRun from './MazeRunCaseStudy';
-import flora from './FloraCaseStudy';
+import ThaalSupply from './ThaalSupplyCaseStudy'
 
 import cv from './assets/CV.pdf';
 import image from './assets/MainASCII.png';
@@ -157,9 +157,9 @@ function App() {
         />
 
         <Route
-          path="/projects/flora"
+          path="/projects/thaal-supply"
           element={
-            <CaseStudy data={flora} />
+            <CaseStudy data={ThaalSupply} />
           }
         />
 

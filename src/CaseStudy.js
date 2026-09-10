@@ -108,8 +108,8 @@ function CaseStudy({ data }) {
   const sectionRefs = useRef({});
 
   useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -142,10 +142,15 @@ function CaseStudy({ data }) {
           <div className="cs-step" key={step.id}>
             <a
               href={`#${step.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                sectionRefs.current[step.id]?.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start',
+                });
+              }}
               className={`cs-step__circle ${
-                activeStep === step.id
-                  ? 'cs-step__circle--active'
-                  : ''
+                activeStep === step.id ? 'cs-step__circle--active' : ''
               }`}
             >
               {index + 1}
